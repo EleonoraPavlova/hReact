@@ -44,16 +44,23 @@ export const HW2 = () => {
     ]
   }
 
-  let [currentUsers, setCurrentUsers] = useState<UsersObject>(users);
+  //let [currentUsers, setCurrentUsers] = useState<UsersObject>(users);
+  let [isSelected, setSelected] = useState(false)
 
-  const filterUsers = () => {
-    const filteredUsers = currentUsers.myFriends.filter(user => user.address.city === 'Los Angeles');
-    setCurrentUsers({ myFriends: filteredUsers });
-  };
+  // const filterUsers = () => {
+  //const filteredUsers = currentUsers.myFriends.filter(user => user.address.city === 'Los Angeles');
+  // setCurrentUsers({ myFriends: filteredUsers });
+  // };
+  let filteredUsers = users
+
+  if (isSelected) {
+    filteredUsers = { myFriends: filteredUsers.myFriends.filter(user => user.address.city === 'Los Angeles') }
+  }
+
 
   return (
     <div id={'hw02'}>
-      <UserList2 users={currentUsers} filterUsers={filterUsers} />
+      <UserList2 users={filteredUsers} filterUsers={() => setSelected(!isSelected)} />
     </div>
   );
 };
