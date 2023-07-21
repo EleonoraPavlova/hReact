@@ -1,3 +1,4 @@
+import { Car } from "./Car";
 import { UserList } from './UserList';
 
 export const HW1 = () => {
@@ -27,9 +28,16 @@ export const HW1 = () => {
 		{ id: 10, name: 'Emily', age: 55, address: { street: '765 Aspen Blvd', city: 'Los Angeles' } },
 	];
 
+	const cars = [
+		{ manufacturer: 'BMW', model: 'm5cs', id: 1 },
+		{ manufacturer: 'Mercedes', model: 'e63s', id: 2 },
+		{ manufacturer: 'Audi', model: 'rs6', id: 3 }
+	]
+
 	return (
 		<div id={'hw01'}>
 			<UserList users={users} />
+			<Car cars={cars} />
 		</div>
 	);
 };
