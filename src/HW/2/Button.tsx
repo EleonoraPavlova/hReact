@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
+
 
 export type ToggleButtonProps = {
   action: () => void,
-  children: string
-  id: string
+  id: string,
+  children: React.ReactNode;
 }
 
 export const ToggleButton = (props: ToggleButtonProps) => {
