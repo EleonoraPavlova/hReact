@@ -1,3 +1,5 @@
+
+import { Button } from "../../components/Button";
 import { Car } from "./Car";
 import { UserList } from './UserList';
 
@@ -34,10 +36,21 @@ export const HW1 = () => {
 		{ manufacturer: 'Audi', model: 'rs6', id: 3 }
 	]
 
+	function oneButton() {
+
+		console.log('one')
+	}
+
+	function twoButton(n: number, age: number) {
+		console.log(n, age)
+	}
+
 	return (
 		<div id={'hw01'}>
 			<UserList users={users} />
 			<Car cars={cars} />
+			<Button id="one" action={oneButton} color="red">Channel 1</Button>
+			<Button id="two" action={() => twoButton(2, 78)}>Channel 2</Button>
 		</div>
 	);
 };

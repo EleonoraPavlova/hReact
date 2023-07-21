@@ -1,5 +1,5 @@
 
-import { ToggleButton } from "./Button";
+import { Button } from "../../components/Button";
 import { CurrentUser } from './CurrentUser';
 import { UsersObject } from './HW2';
 
@@ -13,7 +13,7 @@ export const UserList2 = (props: UserList2Props) => {
 	return (
 		<div id={'hw02-users'}>
 			<h2>User List 2:</h2>
-			<ToggleButton id="hw02-filter-button" action={props.filterUsers}>SHOW ME FRIENDS FROM LA</ToggleButton>
+			<Button id="hw02-filter-button" action={props.filterUsers}>SHOW ME FRIENDS FROM LA</Button>
 			<ul>
 				{props.users.myFriends.map((user) => (< CurrentUser key={user.id} user={user} />))}
 			</ul>

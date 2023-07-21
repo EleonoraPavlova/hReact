@@ -1,13 +1,15 @@
 import React, { ReactNode } from 'react';
 
 
-export type ToggleButtonProps = {
+export type ButtonProps = {
   action: () => void,
   id: string,
-  children: React.ReactNode;
+  children: ReactNode;
+  color?: string,
+  class?: string,
 }
 
-export const ToggleButton = (props: ToggleButtonProps) => {
+export const Button = (props: ButtonProps) => {
   return (
     <button key={props.id} onClick={() => { props.action() }}>{props.children}</button>
   )
