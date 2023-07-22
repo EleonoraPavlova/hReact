@@ -6,11 +6,11 @@ export type ButtonProps = {
   id: string,
   children: ReactNode;
   color?: string,
-  class?: string,
+  additionalClass?: string,
 }
 
 export const Button = (props: ButtonProps) => {
   return (
-    <button key={props.id} onClick={() => { props.action() }}>{props.children}</button>
+    <button key={props.id} onClick={() => { props.action() }} className={`button ${props.additionalClass}`}> {props.children}</button >
   )
 }
