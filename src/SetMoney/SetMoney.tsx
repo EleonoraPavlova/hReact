@@ -47,6 +47,7 @@ export const SetMoney = () => {
       <Button id="dollars" action={() => filterMoney("Dollars")} additionalClass="item red">Dollars</Button>
       <Button id="euros" action={() => filterMoney("Euros")} additionalClass="item violet">Euros</Button>
       <Button id="other" action={() => filterMoney("Other")} additionalClass="item pink">Other</Button>
+
     </div>
   );
 };
