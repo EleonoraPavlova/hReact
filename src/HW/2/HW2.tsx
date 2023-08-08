@@ -53,7 +53,6 @@ export const HW2 = () => {
     <div id={'hw02'}>
       <UserList2 users={currentUsers} filterUsers={filterUsers} />
       <hr />
-
     </div>
   );
 };

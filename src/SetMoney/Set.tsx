@@ -7,7 +7,6 @@ const CrazyButton = (props: any) => {
     backgroundColor: props.bgColor,
     title: props.title
   }
-
   return <button style={style}>
     {props.title}
   </button>

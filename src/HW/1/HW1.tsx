@@ -24,7 +24,6 @@ export const HW1 = () => {
 	]
 
 	function oneButton() {
-
 		console.log('one')
 	}
 
